@@ -5,7 +5,7 @@
 multi_agent_system/
 │
 ├── README.md
-├── run.py                         # Entry point for local testing / CLI
+├── .gitignore
 │
 ├── backend/
 │   ├── app.py                     # Main FastAPI/Flask app
