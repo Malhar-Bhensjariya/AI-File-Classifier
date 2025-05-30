@@ -1,11 +1,8 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from agents.classifier_agent import classify_and_route
 from memory.memory import MemoryManager
-import os
 
 app = FastAPI(title="Multi-Agent AI System")
-
-# Initialize shared memory
 memory = MemoryManager()
 
 @app.post("/upload/")

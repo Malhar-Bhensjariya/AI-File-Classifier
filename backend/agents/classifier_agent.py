@@ -5,20 +5,16 @@ from agents.json_agent import handle_json
 from agents.pdf_agent import handle_pdf
 
 def classify_and_route(filename, content, memory):
-    fmt = detect_format(filename)
+    file_format = detect_format(filename, content)
     intent = classify_intent(content)
 
-    memory.log({
-        "source": filename,
-        "type": fmt,
-        "intent": intent
-    })
+    memory.log_metadata(filename, file_format, intent)
 
-    if fmt == "email":
+    if file_format == "Email":
         return handle_email(content, memory)
-    elif fmt == "json":
+    elif file_format == "JSON":
         return handle_json(content, memory)
-    elif fmt == "pdf":
+    elif file_format == "PDF":
         return handle_pdf(content, memory)
     else:
-        raise ValueError("Unsupported format.")
+        return {"error": "Unsupported format"}
