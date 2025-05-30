@@ -1,7 +1,7 @@
 ## AI-File-Classifier
 
 # Project Structure
-text```
+```text
 multi_agent_system/
 │
 ├── README.md
@@ -16,7 +16,7 @@ multi_agent_system/
 │   │   ├── classifier_agent.py    # Format + intent classification
 │   │   ├── email_agent.py         # Handles email parsing
 │   │   ├── json_agent.py          # Handles JSON extraction
-│   │   └── pdf_agent.py           # Handles PDF parsing/extraction ✅
+│   │   └── pdf_agent.py           # Handles PDF parsing/extraction
 │
 │   ├── memory/                    # Shared memory module
 │   │   ├── __init__.py
