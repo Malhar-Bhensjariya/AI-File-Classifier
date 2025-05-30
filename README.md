@@ -1,6 +1,8 @@
 ## AI-File-Classifier
+Objective:
+Build a multi-agent AI system that accepts input in PDF, JSON, or Email (text) format, classifies the format and intent, and routes it to the appropriate agent. The system must maintain shared context (e.g., sender, topic, last extracted fields) to enable chaining and traceability.
 
-# Project Structure
+## Project Structure
 ```text
 multi_agent_system/
 │
@@ -32,12 +34,12 @@ multi_agent_system/
 │   ├── data/                      # I/O samples & logs
 │   │   ├── input/
 │   │   │   ├── sample_email.txt
-│   │   │   ├── sample_invoice.json
-│   │   │   └── sample_regulation.pdf
+│   │   │   ├── sample_json.json
+│   │   │   └── sample_pdf.pdf
 │   │   └── output/
 │   │       ├── extracted/
 │   │       │   ├── processed_email.json
-│   │       │   ├── processed_invoice.json
+│   │       │   ├── processed_json.json
 │   │       │   └── processed_pdf.json
 │   │       └── logs/
 │   │           └── system_log.txt
