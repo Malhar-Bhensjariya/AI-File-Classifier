@@ -13,7 +13,7 @@ multi_agent_system/
 ├── backend/
 │   ├── app.py                     # Main FastAPI/Flask app
 │   ├── requirements.txt
-│
+│   ├── .env
 │   ├── agents/                    # All agent logic here
 │   │   ├── __init__.py
 │   │   ├── classifier_agent.py    # Format + intent classification
